@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MergeManager : MonoBehaviour
@@ -12,7 +13,8 @@ public class MergeManager : MonoBehaviour
 
     public MergeData Merge(MergeData a, MergeData b)
     {
-        if (a == b) //&& a.nextLevelItem != null)
+        
+        if (a == b && a.nextLevelItem != null)
         {
             Debug.Log($"Merging: {a.itemName} + {b.itemName}");
             return a.nextLevelItem;

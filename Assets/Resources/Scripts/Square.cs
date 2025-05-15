@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
+using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class Square : MonoBehaviour
 {
@@ -26,25 +29,7 @@ public class Square : MonoBehaviour
         trianglePrefab = Resources.Load<GameObject>("Prefabs/Triangle");
     }
 
-    private void Update()
-    {
-    }
-
-    public class MergeableItem : MonoBehaviour
-    {
-        public MergeData data;
-        public Sprite color;
-
-        public void SetData(MergeData newData)
-        {
-            data = newData;
-
-            GetComponent<SpriteRenderer>().sprite = data.icon;
-            // GetComponent<Weapon>().UpdateStats(data.damage, data.attackSpeed);
-        }
-    }
-
-
+  
     public MergeData Merge(MergeData a, MergeData b)
     {
         if (a == b)
@@ -116,4 +101,6 @@ public class Square : MonoBehaviour
         var avgDistance = (sq1Bounds.extents.magnitude + sq2Bounds.extents.magnitude) / 2;
         return avgDistance * 1.2f;
     }
+
+ 
 }
