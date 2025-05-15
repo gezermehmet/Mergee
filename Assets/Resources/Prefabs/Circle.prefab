@@ -165,4 +165,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de90e3b988510024eb2cc6d5e7d3691b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPrefab: {fileID: 0}
+  squarePrefab: {fileID: 0}
+  circlePrefab: {fileID: 0}
+  trianglePrefab: {fileID: 0}
+  sq1: {fileID: 0}
+  sq2: {fileID: 0}
+  triangle1: {fileID: 0}
+  triangle2: {fileID: 0}
+  cir1: {fileID: 0}
+  cir2: {fileID: 0}
