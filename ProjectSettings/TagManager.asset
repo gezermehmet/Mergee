@@ -7,6 +7,8 @@ TagManager:
   - Triangle
   - Square
   - Circle
+  - MainSpawner
+  - Spawner
   layers:
   - Default
   - TransparentFX

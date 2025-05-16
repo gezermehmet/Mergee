@@ -7,12 +7,8 @@ public class Merge : MonoBehaviour
     [SerializeField] private MergeData mergeData;
     private bool isDragging;
     private Vector3 offset;
-    private float mergeDistance = 0.5f;
+    private float mergeDistance = 1f;
 
-
-    private void Awake()
-    {
-    }
 
     private void TryMerge()
     {
@@ -42,13 +38,9 @@ public class Merge : MonoBehaviour
         {
             var newData = dataA.nextLevelItem;
 
-            Instantiate(newData.prefab, a.transform.position, a.transform.rotation);
+            Instantiate(newData.prefab, b.transform.position, b.transform.rotation);
             Destroy(a);
             Destroy(b);
-        }
-        else if (dataB == dataA && dataB.nextLevelItem == null)
-        {
-            Instantiate(dataA.prefab, a.transform.position, a.transform.rotation);
         }
     }
 
